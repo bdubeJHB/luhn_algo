@@ -1,0 +1,7 @@
+*.pyc
+*.pyo
+*.idea
+*.vscode
+v000/
+v0*/
+.DS_Store
