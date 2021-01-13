@@ -1,0 +1,5 @@
+/home/addict/Documents/prac/java/luhn_algo/src/obj/Debug/net5.0/src.vbprojAssemblyReference.cache
+/home/addict/Documents/prac/java/luhn_algo/src/obj/Debug/net5.0/src.GeneratedMSBuildEditorConfig.editorconfig
+/home/addict/Documents/prac/java/luhn_algo/src/obj/Debug/net5.0/src.AssemblyInfoInputs.cache
+/home/addict/Documents/prac/java/luhn_algo/src/obj/Debug/net5.0/src.AssemblyInfo.vb
+/home/addict/Documents/prac/java/luhn_algo/src/obj/Debug/net5.0/src.vbproj.CoreCompileInputs.cache
