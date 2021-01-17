@@ -10,7 +10,13 @@
   <name>luhn-algo</name>
 
   <url>http://maven.apache.org</url>
+  <properties>
+	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	<maven.compiler.source>1.8</maven.compiler.source>
+	<maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
+  </properties>
 
+<!--
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -22,6 +28,7 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+-->
 
   <dependencies>
     <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
@@ -31,12 +38,20 @@
       <version>2.0.0-alpha1</version>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/org.junit/junit-bom -->
+    <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
     <dependency>
-      <groupId>org.junit</groupId>
-      <artifactId>junit-bom</artifactId>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
       <version>5.7.0</version>
-      <type>pom</type>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>5.7.0</version>
+      <scope>test</scope>
     </dependency>
 
     <dependency> 
@@ -53,4 +68,17 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+  <build>
+	<plugins>
+  	  <plugin>
+		<artifactId>maven-compiler-plugin</artifactId>
+		<version>3.8.1</version>
+	  </plugin>
+	  <plugin>
+		<artifactId>maven-surefire-plugin</artifactId>
+		<version>2.22.2</version>
+	  </plugin>
+	</plugins>
+  </build>
 </project>

@@ -1,35 +1,15 @@
 package com.runaddictmusic.luhn;
 
-public class Person
+
+public class Luhn
 {
-    private static int count;
-    private String id_number;
-
-    public Person(String id_number)
+    public final static boolean luhn(String id_number)
     {
-        this.id_number = id_number;
-    }
-
-    public String get_id()
-    {
-        return this.id_number;
-    }
-
-    public boolean validate_number(String num)
-    {
-        // Check if all characters in string are integers
-        //for(int index = 0; index < num.length(); index++)
-        //{
-        //    if(!num.charAt(index).isInt())
-        //    {
-        //        return False;
-        //    }
-        //}
         try
         {
-            Integer.parseInt(num);
+            Integer.parseInt(id_number);
         }
-        catch(NumberFormatException e)
+        catch(Exception e)
         {
             System.err.print("Number contains illegal charaters");
             return false;
@@ -37,9 +17,9 @@ public class Person
 
         int sum = 0;
         boolean check_digit = false;
-        for(int index = num.length(); index > 0; index--)
+        for(int index = id_number.length(); index > 0; index--)
         {
-            int current = Integer.valueOf(num.charAt(index));
+            int current = Integer.valueOf(id_number.charAt(index));
             if(check_digit)
             {
                 if(current * 2 > 9)
@@ -64,3 +44,4 @@ public class Person
         return sum % 10 == 0 ? true: false;
     }
 }
+
