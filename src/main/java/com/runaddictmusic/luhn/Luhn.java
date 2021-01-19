@@ -5,6 +5,9 @@ public class Luhn
 {
     public final static boolean luhn(String id_number)
     {
+        if(id_number == null || id_number.isEmpty())
+            return False;
+
         try
         {
             Integer.parseInt(id_number);
