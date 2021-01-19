@@ -12,34 +12,37 @@ public class LuhnTest
     {
         String id = "42082fybtp0rz";
         assertFalse(Luhn.luhn(id));
-    } /*
+    }
 
 
     @Test
     public void implementsLuhnFormulaCorrectly()
     {
-        Person test_person = new Person("8888888888888888");
-        assertFalse(test_person.validate_number(test_person.get_id()));
+        String id = "8888888888888888";
+        assertFalse(Luhn.luhn(id));
 
-        test_person.set_id("1111");
-        assertTrue(test_person.validate_number(test_person.get_id()));
+        id = "1111";
+        assertTrue(Luhn.luhn(id));
     }
 
 
     @Test
     public void evaluatesAnyPositiveLengthOfNumber()
     {
-        Person test_person = new Person("4444444");
-        assertTrue(test_person.validate_number(test_person.get_id()));
+        String id = "4444444";
+        assertTrue(Luhn.luhn(id));
+
+        assertTrue(Luhn.luhn("22"));
+
+        assertTrue(Luhn.luhn("444"));
     }
 
 
     @Test
     public void doesNotAcceptEmptyStrings()
     {
-        Person test_person = new Person("500");
-        assertFalse(test_person.set_id(""));
-        assertEquals(test_person.get_id(), "500");
-    }*/
+        String id = "";
+        assertFalse(Luhn.luhn("500"));
+    }
 }
 
