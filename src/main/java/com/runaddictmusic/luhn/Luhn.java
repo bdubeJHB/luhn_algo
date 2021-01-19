@@ -20,7 +20,7 @@ public class Luhn
 
         int sum = 0;
         boolean check_digit = false;
-        for(int index = id_number.length(); index > 0; index--)
+        for(int index = id_number.length() - 1; index >= 0; index--)
         {
             int current = Integer.valueOf(id_number.charAt(index));
             if(check_digit)

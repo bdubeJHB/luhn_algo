@@ -22,7 +22,7 @@ public class LuhnTest
         assertFalse(Luhn.luhn(id));
 
         id = "1111";
-        assertTrue(Luhn.luhn(id));
+        assertFalse(Luhn.luhn(id));
     }
 
 
@@ -34,7 +34,7 @@ public class LuhnTest
 
         assertTrue(Luhn.luhn("22"));
 
-        assertTrue(Luhn.luhn("444"));
+        assertFalse(Luhn.luhn("444"));
     }
 
 
