@@ -5,28 +5,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-public class PersonTest
+public class LuhnTest
 {
     @Test
-    public void personInstanceCounterWorks()
+    public void luhnAlgoNeverAcceptsInvalidStrings()
     {
-        assertEquals(0, Person.get_count());
-
-        Person test1 = new Person("44444444");
-        assertEquals(1, Person.get_count());
-
-        Person test2 = new Person("44444444");
-        assertNotEquals(1, Person.get_count());
-        assertTrue(2, Person.get_count());
+        String id = "42082fybtp0rz";
+        assertFalse(Luhn.luhn(id));
     } /*
-
-
-    @Test
-    public void personClassesNeverAcceptInvalidStrings()
-    {
-        Person test_person = new Person("42082fybtp0rz");
-        assertFalse(test_person.validate_number(test_person.get_id()));
-    }
 
 
     @Test
