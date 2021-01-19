@@ -18,7 +18,7 @@ public class PersonTest
         Person test2 = new Person("44444444");
         assertNotEquals(1, Person.get_count());
         assertTrue(2, Person.get_count());
-    }
+    } /*
 
 
     @Test
@@ -54,6 +54,6 @@ public class PersonTest
         Person test_person = new Person("500");
         assertFalse(test_person.set_id(""));
         assertEquals(test_person.get_id(), "500");
-    }
+    }*/
 }
 
