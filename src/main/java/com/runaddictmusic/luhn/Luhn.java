@@ -1,12 +1,20 @@
 package com.runaddictmusic.luhn;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 public class Luhn
 {
     public final static boolean luhn(String id_number)
     {
+        Logger logger = LoggerFactory.getLogger(Luhn.class);
+
         if(id_number == null || id_number.isEmpty())
+        {
+            logger.error("No valid input");
             return false;
+        }
 
         try
         {
@@ -14,7 +22,7 @@ public class Luhn
         }
         catch(Exception e)
         {
-            System.err.print("Number contains illegal charaters");
+            logger.error("Number contains illegal charaters");
             return false;
         }
 
@@ -44,6 +52,7 @@ public class Luhn
             }
         }
 
+        logger.info("For input \"{}\", validation returned: {}", id_number, sum % 10 == 0);
         return sum % 10 == 0 ? true: false;
     }
 }
