@@ -5,30 +5,29 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-public class LuhnTest
-{
+public class LuhnTest {
     @Test
-    public void luhnAlgoNeverAcceptsInvalidStrings()
-    {
+    public void luhnAlgoNeverAcceptsInvalidStrings() {
         String id = "42082fybtp0rz";
         assertFalse(Luhn.luhn(id));
     }
 
 
     @Test
-    public void implementsLuhnFormulaCorrectly()
-    {
-        String id = "8888888888888888";
-        assertFalse(Luhn.luhn(id));
+    public void implementsLuhnFormulaCorrectly() {
+        String creditCard = "8888888888888888";
+        assertFalse(Luhn.luhn(creditCard));
 
-        id = "1111";
-        assertFalse(Luhn.luhn(id));
+        creditCard = "1111";
+        assertFalse(Luhn.luhn(creditCard));
+
+        creditCard = "4111111111111111";
+        assertTrue(Luhn.luhn(creditCard));
     }
 
 
     @Test
-    public void evaluatesAnyPositiveLengthOfNumber()
-    {
+    public void evaluatesAnyPositiveLengthOfNumber() {
         String id = "4444444";
         assertTrue(Luhn.luhn(id));
 
@@ -39,8 +38,7 @@ public class LuhnTest
 
 
     @Test
-    public void doesNotAcceptEmptyStrings()
-    {
+    public void doesNotAcceptEmptyStrings() {
         String id = "";
         assertFalse(Luhn.luhn("500"));
     }
