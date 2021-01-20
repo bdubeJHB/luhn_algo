@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.runaddictmusic.luhn.LuhnTest" time="0.067" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.runaddictmusic.luhn.LuhnTest" time="0.135" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="14"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/home/addict/Documents/prac/java/luhn_algo/luhn-algo/target/test-classes:/home/addict/Documents/prac/java/luhn_algo/luhn-algo/target/classes:/home/addict/.m2/repository/org/slf4j/slf4j-api/2.0.0-alpha1/slf4j-api-2.0.0-alpha1.jar:/home/addict/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.0/junit-jupiter-api-5.7.0.jar:/home/addict/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/addict/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/addict/.m2/repository/org/junit/platform/junit-platform-commons/1.7.0/junit-platform-commons-1.7.0.jar:/home/addict/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.0/junit-jupiter-engine-5.7.0.jar:/home/addict/.m2/repository/org/junit/platform/junit-platform-engine/1.7.0/junit-platform-engine-1.7.0.jar:/home/addict/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/home/addict/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/home/addict/.m2/repository/org/slf4j/slf4j-simple/2.0.0-alpha1/slf4j-simple-2.0.0-alpha1.jar:"/>
+    <property name="java.class.path" value="/home/addict/Documents/prac/java/luhn-algo/target/test-classes:/home/addict/Documents/prac/java/luhn-algo/target/classes:/home/addict/.m2/repository/org/slf4j/slf4j-api/2.0.0-alpha1/slf4j-api-2.0.0-alpha1.jar:/home/addict/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.0/junit-jupiter-api-5.7.0.jar:/home/addict/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/addict/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/addict/.m2/repository/org/junit/platform/junit-platform-commons/1.7.0/junit-platform-commons-1.7.0.jar:/home/addict/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.0/junit-jupiter-engine-5.7.0.jar:/home/addict/.m2/repository/org/junit/platform/junit-platform-engine/1.7.0/junit-platform-engine-1.7.0.jar:/home/addict/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/home/addict/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/home/addict/.m2/repository/org/slf4j/slf4j-simple/2.0.0-alpha1/slf4j-simple-2.0.0-alpha1.jar:"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://openjdk.java.net/"/>
@@ -12,9 +12,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ZA"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-14-openjdk/lib"/>
-    <property name="sun.java.command" value="/home/addict/Documents/prac/java/luhn_algo/luhn-algo/target/surefire/surefirebooter14328478528702217835.jar /home/addict/Documents/prac/java/luhn_algo/luhn-algo/target/surefire 2021-01-20T01-06-45_236-jvmRun1 surefire13580772097890860684tmp surefire_010293347596783854259tmp"/>
+    <property name="sun.java.command" value="/home/addict/Documents/prac/java/luhn-algo/target/surefire/surefirebooter2003629360105208653.jar /home/addict/Documents/prac/java/luhn-algo/target/surefire 2021-01-20T17-34-00_607-jvmRun1 surefire5333942013164129584tmp surefire_017032666031414301635tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/home/addict/Documents/prac/java/luhn_algo/luhn-algo/target/test-classes:/home/addict/Documents/prac/java/luhn_algo/luhn-algo/target/classes:/home/addict/.m2/repository/org/slf4j/slf4j-api/2.0.0-alpha1/slf4j-api-2.0.0-alpha1.jar:/home/addict/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.0/junit-jupiter-api-5.7.0.jar:/home/addict/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/addict/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/addict/.m2/repository/org/junit/platform/junit-platform-commons/1.7.0/junit-platform-commons-1.7.0.jar:/home/addict/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.0/junit-jupiter-engine-5.7.0.jar:/home/addict/.m2/repository/org/junit/platform/junit-platform-engine/1.7.0/junit-platform-engine-1.7.0.jar:/home/addict/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/home/addict/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/home/addict/.m2/repository/org/slf4j/slf4j-simple/2.0.0-alpha1/slf4j-simple-2.0.0-alpha1.jar:"/>
+    <property name="surefire.test.class.path" value="/home/addict/Documents/prac/java/luhn-algo/target/test-classes:/home/addict/Documents/prac/java/luhn-algo/target/classes:/home/addict/.m2/repository/org/slf4j/slf4j-api/2.0.0-alpha1/slf4j-api-2.0.0-alpha1.jar:/home/addict/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.0/junit-jupiter-api-5.7.0.jar:/home/addict/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/addict/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/addict/.m2/repository/org/junit/platform/junit-platform-commons/1.7.0/junit-platform-commons-1.7.0.jar:/home/addict/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.0/junit-jupiter-engine-5.7.0.jar:/home/addict/.m2/repository/org/junit/platform/junit-platform-engine/1.7.0/junit-platform-engine-1.7.0.jar:/home/addict/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/home/addict/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/home/addict/.m2/repository/org/slf4j/slf4j-simple/2.0.0-alpha1/slf4j-simple-2.0.0-alpha1.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/home/addict"/>
     <property name="user.language" value="en"/>
@@ -22,12 +22,12 @@
     <property name="java.version.date" value="2020-07-14"/>
     <property name="java.home" value="/usr/lib/jvm/java-14-openjdk"/>
     <property name="file.separator" value="/"/>
-    <property name="basedir" value="/home/addict/Documents/prac/java/luhn_algo/luhn-algo"/>
+    <property name="basedir" value="/home/addict/Documents/prac/java/luhn-algo"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/home/addict/Documents/prac/java/luhn_algo/luhn-algo/target/surefire/surefirebooter14328478528702217835.jar"/>
+    <property name="surefire.real.class.path" value="/home/addict/Documents/prac/java/luhn-algo/target/surefire/surefirebooter2003629360105208653.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="14.0.2+12"/>
     <property name="user.name" value="addict"/>
@@ -40,7 +40,7 @@
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="/tmp"/>
     <property name="java.version" value="14.0.2"/>
-    <property name="user.dir" value="/home/addict/Documents/prac/java/luhn_algo/luhn-algo"/>
+    <property name="user.dir" value="/home/addict/Documents/prac/java/luhn-algo"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
@@ -50,8 +50,8 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="58.0"/>
   </properties>
-  <testcase name="luhnAlgoNeverAcceptsInvalidStrings" classname="com.runaddictmusic.luhn.LuhnTest" time="0.046"/>
-  <testcase name="doesNotAcceptEmptyStrings" classname="com.runaddictmusic.luhn.LuhnTest" time="0.001"/>
-  <testcase name="evaluatesAnyPositiveLengthOfNumber" classname="com.runaddictmusic.luhn.LuhnTest" time="0.002"/>
-  <testcase name="implementsLuhnFormulaCorrectly" classname="com.runaddictmusic.luhn.LuhnTest" time="0.006"/>
+  <testcase name="luhnAlgoNeverAcceptsInvalidStrings" classname="com.runaddictmusic.luhn.LuhnTest" time="0.1"/>
+  <testcase name="doesNotAcceptEmptyStrings" classname="com.runaddictmusic.luhn.LuhnTest" time="0.002"/>
+  <testcase name="evaluatesAnyPositiveLengthOfNumber" classname="com.runaddictmusic.luhn.LuhnTest" time="0.006"/>
+  <testcase name="implementsLuhnFormulaCorrectly" classname="com.runaddictmusic.luhn.LuhnTest" time="0"/>
 </testsuite>
