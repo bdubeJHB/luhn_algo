@@ -35,25 +35,25 @@ public class Luhn {
                         return false;
                 }
 
-                logger.info("Now evaluating \"{}\"", idNumber);
+                logger.debug("Now evaluating \"{}\"", idNumber);
                 for (int index = idNumber.length() - 1; index >= 0; index--) {
                         current = Integer.parseInt(String.valueOf(idNumber.charAt(index)));
-                        logger.info("At position {}, value is {}",
+                        logger.debug("At position {}, value is {}",
                                      index, current);
 
                         if (checkDigit && (current * 2 > 9)) {
                                 current *= 2;
                                 sum += current % 10;
                                 sum += current / 10;
-                                logger.info("Adding {} + {}. Sum is currently {}",
+                                logger.debug("Adding {} + {}. Sum is currently {}",
                                              current % 10, current / 10, sum);
                         } else if (checkDigit) {
                                 sum += current * 2;
-                                logger.info("Adding {}. Sum is currently {}",
+                                logger.debug("Adding {}. Sum is currently {}",
                                              current * 2, sum);
                         } else {
                                 sum += current;
-                                logger.info("Adding {} as is. Sum is currently {}",
+                                logger.debug("Adding {} as is. Sum is currently {}",
                                              current, sum);
                         }
 
