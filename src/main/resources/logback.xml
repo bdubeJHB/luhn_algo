@@ -6,9 +6,9 @@
         </encoder>
     </appender>
 
-    <logger name="com.runaddictmusic.luhn" level="info" />
+    <logger name="com.runaddictmusic.luhn" level="debug" />
 
-    <root level="error">
+    <root level="debug">
         <appender-ref ref="STDOUT" />
     </root>
 </configuration>

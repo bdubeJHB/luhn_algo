@@ -17,45 +17,53 @@ import org.slf4j.LoggerFactory;
  * @author  Benedict Dube
  */
 public class Luhn {
-    public final static boolean luhn(String idNumber) {
-        Logger logger = LoggerFactory.getLogger(Luhn.class);
-        int sum = 0;
-        boolean checkDigit = false;
+        public final static boolean luhn(String idNumber) {
+                Logger logger = LoggerFactory.getLogger(Luhn.class);
+                int sum = 0;
+                boolean checkDigit = false;
+                int current;
 
-        if ((idNumber == null) || idNumber.isEmpty()) {
-            logger.error("No valid input");
-            return false;
-        }
-
-        try {
-            Integer.parseInt(idNumber);
-        }
-        catch (Exception e) {
-            logger.error("Number contains illegal charaters");
-            return false;
-        }
-
-        for (int index = idNumber.length() - 1; index >= 0; index--) {
-            int current = Integer.valueOf(idNumber.charAt(index));
-
-            if (checkDigit) {
-                if (current * 2 > 9) {
-                    current *= 2;
-                    sum += current % 10;
-                    sum += current / 10;
-                } else {
-                    sum += current * 2;
+                if ((idNumber == null) || idNumber.isEmpty()) {
+                        logger.error("No valid input");
+                        return false;
                 }
-                checkDigit = false;
-            } else {
-                sum += current;
-                checkDigit = true;
-            }
-        }
 
-        logger.info("For input \"{}\", validation returned: {}",
-                    idNumber, sum % 10 == 0);
-        return (sum % 10 == 0) ? true: false;
-    }
+                try {
+                        Integer.parseInt(idNumber);
+                } catch (Exception e) {
+                        logger.error("Number contains illegal charaters");
+                        return false;
+                }
+
+                logger.info("Now evaluating \"{}\"", idNumber);
+                for (int index = idNumber.length() - 1; index >= 0; index--) {
+                        current = Integer.parseInt(String.valueOf(idNumber.charAt(index)));
+                        logger.info("At position {}, value is {}",
+                                     index, current);
+
+                        if (checkDigit && (current * 2 > 9)) {
+                                current *= 2;
+                                sum += current % 10;
+                                sum += current / 10;
+                                logger.info("Adding {} + {}. Sum is currently {}",
+                                             current % 10, current / 10, sum);
+                        } else if (checkDigit) {
+                                sum += current * 2;
+                                logger.info("Adding {}. Sum is currently {}",
+                                             current * 2, sum);
+                        } else {
+                                sum += current;
+                                logger.info("Adding {} as is. Sum is currently {}",
+                                             current, sum);
+                        }
+
+                        checkDigit = !checkDigit;
+                }
+
+                logger.info("For input \"{}\", validation returned: {}",
+                            idNumber, sum % 10 == 0);
+
+                return (sum % 10 == 0) ? true: false;
+        }
 }
 
