@@ -17,8 +17,9 @@ import org.slf4j.LoggerFactory;
  * @author  Benedict Dube
  */
 public class Luhn {
+        private static final Logger logger = LoggerFactory.getLogger(Luhn.class);
+
         public final static boolean luhn(String idNumber) {
-                Logger logger = LoggerFactory.getLogger(Luhn.class);
                 int sum = 0;
                 boolean checkDigit = false;
                 int current;
