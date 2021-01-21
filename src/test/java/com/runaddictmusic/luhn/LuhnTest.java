@@ -21,25 +21,15 @@ public class LuhnTest {
         accountNumber = "1111";
         assertFalse(Luhn.luhn(accountNumber));
 
-        accountNumber = "49927398716";
-        //assertTrue(Luhn.luhn(accountNumber));
-    }
-
-
-    @Test
-    public void evaluatesAnyPositiveLengthOfNumber() {
-        String id = "4444444";
-        assertTrue(Luhn.luhn(id));
-
-        assertTrue(Luhn.luhn("22"));
-
-        assertFalse(Luhn.luhn("444"));
+        // accountNumber = "49927398716";
+        // assertTrue(Luhn.luhn(accountNumber));
     }
 
 
     @Test
     public void doesNotAcceptEmptyStrings() {
         String id = "";
+        assertFalse(Luhn.luhn(id));
         assertFalse(Luhn.luhn("500"));
     }
 }
